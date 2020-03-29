@@ -8,6 +8,6 @@
 
 # INSTALLAZIONE
 
-× Modificare il file webhook.php inserendo token e url boh.php e dal browser aprirlo.
+× Modificare il file webhook.php inserendo token e url bot.php e dal browser aprirlo.
 
   A questo punto il vostro bot è pronto, potrete avviarlo e vedere i comandi e le funzioni! 👍 
