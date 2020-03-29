@@ -1,4 +1,4 @@
-# GjacBot 3.0.1.
+# GjacBot SQL
 
 × GjacBot è un framework php per lo sviluppo di bot Telegram.
 
