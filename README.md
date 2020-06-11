@@ -13,9 +13,9 @@
 × Se non vuoi usare il Database MySQL, basta togliere la linea di codice:
 `$bot->useDatabase(
 'localhost',
-'testad',
 '',
-'my_testad'
+'',
+''
 );`
 
 A questo punto il vostro bot è pronto, potrete avviarlo e vedere i comandi e le funzioni! 👍 
