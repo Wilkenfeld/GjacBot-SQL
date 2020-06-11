@@ -1,5 +1,5 @@
 <?php
-$token = "TOKEN"; #Il token da @BotFather
+$token = "TOKEN_BOT"; #Il token da @BotFather
 $sito = "https://tuosito.it/bot.php"; # Il percorso del file bot.php
 
 ######################## NON MODIFICARE ########################
