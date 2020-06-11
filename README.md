@@ -9,5 +9,12 @@
 # INSTALLAZIONE
 
 × Modificare il file webhook.php inserendo token e url bot.php e dal browser aprirlo.
+× Se non vuoi usare il Database MySQL, basta togliere la linea di codice:
+`$bot->useDatabase(
+'localhost',
+'testad',
+'',
+'my_testad'
+);`
 
-  A questo punto il vostro bot è pronto, potrete avviarlo e vedere i comandi e le funzioni! 👍 
+A questo punto il vostro bot è pronto, potrete avviarlo e vedere i comandi e le funzioni! 👍 
