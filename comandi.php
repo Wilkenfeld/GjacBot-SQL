@@ -7,11 +7,11 @@ if($bot->is($cmd,'start')) {
 
 if($bot->is($cmd,'photoinline')) { 
 	$menu = '[ [{"text": "Canale 💎", "url": "https://t.me/lucadevelopments"}] ]'; #! URL per inserire un link, callback_data per inserire un comando
-	$bot->sendPhoto($chatID, 'Ciao!', "https://linkphoto.com/photo.png", $menu); 
+	$bot->sendPhoto($chatID, 'Ciao!', "https://www.google.it/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", $menu); 
 }
 
 if($bot->is($cmd,'photo')) { 
-	$bot->sendPhoto($chatID, 'ciao', "https://linkphoto.com/photo.png");
+	$bot->sendPhoto($chatID, 'ciao', "https://www.google.it/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
 }
 
 if($bot->is($cmd,'forward')) { 
