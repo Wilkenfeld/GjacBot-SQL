@@ -1,9 +1,6 @@
 <?php
-$token = "TOKEN_BOT"; #Il token da @BotFather
+$token = "TOKEN_BOT"; # Il token da @BotFather
 $sito = "https://tuosito.it/bot.php"; # Il percorso del file bot.php
 
-######################## NON MODIFICARE ########################
-$webhook = 'https://api.telegram.org/bot'.$token.'/setwebhook?url='.$sito.'?api='.$token;
-$ch = curl_init("$webhook");
-curl_exec($ch);
-######################## NON MODIFICARE ########################
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+file_get_contents('https://api.telegram.org/bot'.$token.'/setwebhook?url='.$sito.'?api='.$token);

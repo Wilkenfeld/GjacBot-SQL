@@ -3,7 +3,7 @@
 
 class TGFirewall 
 {
-function start()
+function __construct()
 {	
 	if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)){
 		$ip_header = "HTTP_X_FORWARDED_FOR";
