@@ -11,6 +11,17 @@ if(null !== update) {
 		$cognome = update['callback_query']['from']['last_name'];
 		$username = update['callback_query']['from']['username'];
 		$lang = update['callback_query']['from']['language_code'];
+	} else {
+		$cbid = '';
+		$cbdata = '';
+		$cbmsg = '';
+		$msgID = '';
+		$chatID = '';
+		$userID = '';
+		$nome = '';
+		$cognome = '';
+		$username = '';
+		$lang = '';
 	}
 	$testo = update['message']['text']; 
 	$chatID = update["message"]["chat"]["id"];
