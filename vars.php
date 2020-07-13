@@ -1,5 +1,17 @@
 <?php
 if(null !== update) {
+	if(update['callback_query']) {
+		$cbid = update['callback_query']['id'];
+		$cbdata = update['callback_query']['data'];
+		$cbmsg = update['callback_query']['message']['text'];
+		$msgID = update['callback_query']['message']['message_id'];
+		$chatID = update['callback_query']['message']['chat']['id'];
+		$userID = update['callback_query']['from']['id'];
+		$nome = update['callback_query']['from']['first_name'];
+		$cognome = update['callback_query']['from']['last_name'];
+		$username = update['callback_query']['from']['username'];
+		$lang = update['callback_query']['from']['language_code'];
+	}
 	$testo = update['message']['text']; 
 	$chatID = update["message"]["chat"]["id"];
 	$userID = update["message"]["from"]["id"];
