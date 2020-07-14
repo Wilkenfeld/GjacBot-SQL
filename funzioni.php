@@ -17,7 +17,16 @@ function sendMessage($chatID, $testo, $menu = '') {
 	global $bot;
 	$parsemode = "HTML"; # HTML OR MARKDOWN
 	$ipertesto = urlencode($testo);
-	$url = endpoints['api']. '/sendmessage?chat_id='.$chatID.'&text='.$ipertesto.'&parse_mode='.$parsemode.'&reply_markup={"inline_keyboard":'.$menu.'}';
+	if($menu) $url = endpoints['api']. '/sendmessage?chat_id='.$chatID.'&text='.$ipertesto.'&parse_mode='.$parsemode.'&reply_markup={"inline_keyboard":'.$menu.'}';
+	else $url = endpoints['api']. '/sendmessage?chat_id='.$chatID.'&text='.$ipertesto.'&parse_mode='.$parsemode;
+	$bot->curl($url);
+}
+function editMessage($chatID, $msgID, $testo, $menu = '') {
+	global $bot;
+	$parsemode = "HTML"; # HTML OR MARKDOWN
+	$ipertesto = urlencode($testo);
+	if($menu) $url = endpoints['api']. '/editMessageText?chat_id='.$chatID.'&message_id='.$msgID.'&text='.$ipertesto.'&parse_mode='.$parsemode.'&reply_markup={"inline_keyboard":'.$menu.'}';
+	else $url = endpoints['api']. '/editMessageText?chat_id='.$chatID.'&message_id='.$msgID.'&text='.$ipertesto.'&parse_mode='.$parsemode;
 	$bot->curl($url);
 }
 function sendPhoto($chatID, $text, $link, $menu = '') {
@@ -63,3 +72,4 @@ function is($cmd, $test){
 	if($cmd === $test) return true; else return false;
 }
 }
+
