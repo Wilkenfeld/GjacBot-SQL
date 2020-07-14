@@ -18,4 +18,7 @@ if($bot->is($cmd,'forward')) {
 	$bot->forwardMessage($chatID, '-1001483330277', '368'); #! Ovviamente non lo manderà se il bot non è nel canale di input
 } 
 
+if($cbdata == 'start') $bot->editMessage($chatID, $msgID, "Ciao bello!");
+
+
 ########################################
