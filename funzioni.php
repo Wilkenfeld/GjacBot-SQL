@@ -60,7 +60,8 @@ function useDatabase($host, $user, $password, $dbname){
 			$conn->query("update $tabella set page = '' where chat_id = $chatID");
 			$u = $res->fetchAll();
 		} else {
-			$a = $conn->prepare("insert into $tabella (chat_id, status, username) values ($chatID, '', \"".$username."\")");
+			$a = $conn->prepare("insert into $tabella (chat_id, status, username) values (?, ?)");
+			$a->bind_param("is", $chatID, $username);
 			$a->execute();
 		}
 	}
