@@ -1,7 +1,7 @@
 <?php
 ########## ESEMPI DI RISPOSTE ##########
 if($bot->is($cmd,'start')) { 
-	$menu = '[ [{"text": "Canale 💎", "url": "https://t.me/lucadevelopments"}] ]'; #! URL per inserire un link, callback_data per inserire un comando
+	$menu = '[ [{"text": "Canale 💎", "url": "https://t.me/lucadevelopments"}, {"text": "PHP Speed", "callback_data": "speedtest"}] ]'; #! URL per inserire un link, callback_data per inserire un comando
 	$bot->sendMessage($chatID, "<b>GjacBot v4</b>\nComandi disponibili:\n/forward (Devi aggiungere il bot al canale dal quale prendi il messaggio),\n/photo\n/photoinline\n/start", $menu);
 }
 
@@ -20,5 +20,11 @@ if($bot->is($cmd,'forward')) {
 
 if($cbdata == 'start') $bot->editMessage($chatID, $msgID, "Ciao bello!");
 
+if($cbdata == 'speedtest') {
+$start = microtime(true);
+$bot->editMessage($chatID, $msgID, "msg.");
+$end = microtime(true);
+$bot->editMessage($chatID, $msgID, $end - $start);
+}
 
 ########################################

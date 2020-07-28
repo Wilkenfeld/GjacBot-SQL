@@ -46,7 +46,7 @@ function forwardMessage($chatID, $fromChannel, $msgID) {
 function useDatabase($host, $user, $password, $dbname){
 		global $chatID;
 		global $username;
-		$tabella = "bot";
+		$tabella = 'bot';
 		$conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
 		$sth = $conn->prepare('CREATE TABLE IF NOT EXISTS '.$tabella.' ( id int(0) AUTO_INCREMENT, chat_id bigint(0), username varchar(200), status varchar(200), PRIMARY KEY (id))');
 		$sth->execute();
@@ -60,7 +60,8 @@ function useDatabase($host, $user, $password, $dbname){
 			$conn->query("update $tabella set page = '' where chat_id = $chatID");
 			$u = $res->fetchAll();
 		} else {
-			$conn->query("insert into $tabella (chat_id, status, username) values ($chatID, '', \"".$username."\")");
+			$a = $conn->prepare("insert into $tabella (chat_id, status, username) values ($chatID, '', \"".$username."\")");
+			$a->execute();
 		}
 	}
 }
@@ -72,4 +73,3 @@ function is($cmd, $test){
 	if($cmd === $test) return true; else return false;
 }
 }
-
